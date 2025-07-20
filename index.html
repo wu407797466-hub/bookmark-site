@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>开发者导航站 - 一站式工具集合</title>
+    <meta name="description" content="收集整理开发者常用工具、模板、资讯等资源的导航站">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .card-hover:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        .search-highlight {
+            background-color: #fef3c7;
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-blue-50 via-white to-green-50 min-h-screen">
+    <!-- 头部 -->
+    <header class="bg-white shadow-sm border-b">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-6">
+                <div class="flex items-center">
+                    <i class="fas fa-compass text-2xl text-blue-600 mr-3"></i>
+                    <h1 class="text-2xl font-bold text-gray-900">开发者导航站</h1>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <button onclick="toggleTheme()" class="p-2 rounded-lg bg-gray-100 hover:bg-gray-200">
+                        <i class="fas fa-moon text-gray-600"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 搜索栏 -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="relative">
+            <input type="text" id="searchInput" placeholder="搜索工具、网站..." 
+                   class="w-full px-4 py-3 pl-12 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+            <i class="fas fa-search absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+        </div>
+    </div>
+
+    <!-- 主要内容 -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
+        <!-- 需求收集和关键词调研 -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                <i class="fas fa-search text-blue-600 mr-3"></i>
+                需求收集和关键词调研
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <a href="https://www.searchsuggest.tips/?keyword=" target="_blank" 
+                   class="bg-white p-6 rounded-lg shadow-md card-hover transition-all duration-300 border border-gray-200">
+                    <h3 class="font-semibold text-gray-900 mb-2">谷歌下拉词</h3>
+                    <p class="text-gray-600 text-sm">获取Google搜索建议关键词</p>
+                </a>
+                <a href="https://www.toolify.ai/Best-AI-Tools-revenue" target="_blank" 
+                   class="bg-white p-6 rounded-lg shadow-md card-hover transition-all duration-300 border border-gray-200">
+                    <h3 class="font-semibold text-gray-900 mb-2">Toolify 榜单</h3>
+                    <p class="text-gray-600 text-sm">AI工具收入排行榜</p>
+                </a>
+                <a href="https://theresanaiforthat.com/requests" target="_blank" 
+                   class="bg-white p-6 rounded-lg shadow-md card-hover transition-all duration-300 border border-gray-200">
+                    <h3 class="font-semibold text-gray-900 mb-2">AI 导航站需求列表</h3>
+                    <p class="text-gray-600 text-sm">查看AI工具需求</p>
+                </a>
+                <a href="https://ahrefs.com/keyword-difficulty" target="_blank" 
+                   class="bg-white p-6 rounded-lg shadow-md card-hover transition-all duration-300 border border-gray-200">
+                    <h3 class="font-semibold text-gray-900 mb-2">关键词难度</h3>
+                    <p class="text-gray-600 text-sm">Ahrefs关键词难度分析</p>
+                </a>
+            </div>
+        </section>
+
+        <!-- 上站必备 -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                <i class="fas fa-rocket text-green-600 mr-3"></i>
+                上站必备
+            </h2>
+            
+            <!-- 域名查询 -->
+            <div class="mb-8">
+                <h3 class="text-lg font-semibold text-gray-800 mb-4">域名查询</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <a href="https://leandomainsearch.com/" target="_blank" 
+                       class="bg-white p-4 rounded-lg shadow-md card-hover transition-all duration-300 border border-gray-200">
+                        <h4 class="font-medium text-gray-900 mb-1">Lean Domain Search</h4>
+                        <p class="text-gray-600 text-sm">域名搜索工具</p>
+                    </a>
+                    <a href="https://query.domains/" target="_blank" 
+                       class="bg-white p-4 rounded-lg shadow-md card-hover transition-all duration-300 border border-gray-200">
+                        <h4 class="font-medium text-gray-900 mb-1">Query Domains</h4>
+                        <p class="text-gray-600 text-sm">域名查询服务</p>
+                    </a>
+                    <a href="https://instantdomainsearch.com/?q=" target="_blank" 
+                       class="bg-white p-4 rounded-lg shadow-md card-hover transition-all duration-300 border border-gray-200">
+                        <h4 class="font-medium text-gray-900 mb-1">Instant Domain Search</h4>
+                        <p class="text-gray-600 text-sm">即时域名搜索</p>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 域名注册 -->
+            <div class="mb-8">
+                <h3 class="text-lg font-semibold text-gray-800 mb-4">域名注册</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <a href="https://spaceship.com" target="_blank" 
+                       class="bg-white p-4 rounded-lg shadow-md card-hover transition-all duration-300 border border-gray-200">
+                        <h4 class="font-medium text-gray-900 mb-1">Spaceship</h4>
+                        <p class="text-gray-600 text-sm">域名注册服务</p>
+                    </a>
+                    <a href="https://porkbun.com" target="_blank" 
+                       class="bg-white p-4 rounded-lg shadow-md card-hover transition-all duration-300 border border-gray-200">
+                        <h4 class="font-medium text-gray-900 mb-1">Porkbun</h4>
+                        <p class="text-gray-600 text-sm">域名注册商</p>
+                    </a>
+                    <a href="https://namecheap.com" target="_blank" 
+                       class="bg-white p-4 rounded-lg shadow-md card-hover transition-all duration-300 border border-gray-200">
+                        <h4 class="font-medium text-gray-900 mb-1">Namecheap</h4>
+                        <p class="text-gray-600 text-sm">知名域名注册商</p>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 代码&网站托管 -->
+            <div class="mb-8">
+                <h3 class="text-lg font-semibold text-gray-800 mb-4">代码&网站托管</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <a href="https://github.com" target="_blank" 
+                       class="bg-white p-4 rounded-lg shadow-md card-hover transition-all duration-300 border border-gray-200">
+                        <h4 class="font-medium text-gray-900 mb-1">GitHub</h4>
+                        <p class="text-gray-600 text-sm">代码托管平台</p>
+                    </a>
+                    <a href="https://cloudflare.com" target="_blank" 
+                       class="bg-white p-4 rounded-lg shadow-md card-hover transition-all duration-300 border border-gray-200">
+                        <h4 class="font-medium text-gray-900 mb-1">Cloudflare</h4>
+                        <p class="text-gray-600 text-sm">CDN和托管服务</p>
+                    </a>
+                    <a href="https://vercel.com" target="_blank" 
+                       class="bg-white p-4 rounded-lg shadow-md card-hover transition-all duration-300 border border-gray-200">
+                        <h4 class="font-medium text-gray-900 mb-1">Vercel</h4>
+                        <p class="text-gray-600 text-sm">前端部署平台</p>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 数据后台 -->
+            <div class="mb-8">
+                <h3 class="text-lg font-semibold text-gray-800 mb-4">数据后台</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <a href="https://search.google.com/search-console" target="_blank" 
+                       class="bg-white p-4 rounded-lg shadow-md card-hover transition-all duration-300 border border-gray-200">
+                        <h4 class="font-medium text-gray-900 mb-1">Google Search Console</h4>
+                        <p class="text-gray-600 text-sm">搜索引擎优化工具</p>
+                    </a>
+                    <a href="https://analytics.google.com/analytics/web/#" target="_blank" 
+                       class="bg-white p-4 rounded-lg shadow-md card-hover transition-all duration-300 border border-gray-200">
+                        <h4 class="font-medium text-gray-900 mb-1">Google Analytics</h4>
+                        <p class="text-gray-600 text-sm">网站数据分析</p>
+                    </a>
+                    <a href="https://www.bing.com/webmasters/submiturl" target="_blank" 
+                       class="bg-white p-4 rounded-lg shadow-md card-hover transition-all duration-300 border border-gray-200">
+                        <h4 class="font-medium text-gray-900 mb-1">Bing Webmaster</h4>
+                        <p class="text-gray-600 text-sm">必应站长工具</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 竞品调研 -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                <i class="fas fa-chart-line text-purple-600 mr-3"></i>
+                竞品调研
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <a href="https://aitdk.com" target="_blank" 
+                   class="bg-white p-6 rounded-lg shadow-md card-hover transition-all duration-300 border border-gray-200">
+                    <h3 class="font-semibold text-gray-900 mb-2">AITDK</h3>
+                    <p class="text-gray-600 text-sm">查看流量和网页关键词</p>
+                </a>
+                <a href="https://ahrefs.com/free-seo-tools" target="_blank" 
+                   class="bg-white p-6 rounded-lg shadow-md card-hover transition-all duration-300 border border-gray-200">
+                    <h3 class="font-semibold text-gray-900 mb-2">Ahrefs 免费工具</h3>
+                    <p class="text-gray-600 text-sm">查看外链和SEO数据</p>
+                </a>
+                <a href="https://semrush.com" target="_blank" 
+                   class="bg-white p-6 rounded-lg shadow-md card-hover transition-all duration-300 border border-gray-200">
+                    <h3 class="font-semibold text-gray-900 mb-2">SEMrush</h3>
+                    <p class="text-gray-600 text-sm">查看网站关键词</p>
+                </a>
+            </div>
+        </section>
+
+        <!-- 上站模板 -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                <i class="fas fa-code text-orange-600 mr-3"></i>
+                上站模板
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <a href="https://github.com/openRin/Rin" target="_blank" 
+                   class="bg-white p-6 rounded-lg shadow-md card-hover transition-all duration-300 border border-gray-200">
+                    <h3 class="font-semibold text-gray-900 mb-2">Rin</h3>
+                    <p class="text-gray-600 text-sm">基于Cloudflare的动态博客</p>
+                </a>
+                <a href="https://github.com/ixartz/Next-js-Boilerplate" target="_blank" 
+                   class="bg-white p-6 rounded-lg shadow-md card-hover transition-all duration-300 border border-gray-200">
+                    <h3 class="font-semibold text-gray-900 mb-2">Next.js Boilerplate</h3>
+                    <p class="text-gray-600 text-sm">Next.js 15启动模板</p>
+                </a>
+                <a href="https://github.com/ixartz/SaaS-Boilerplate" target="_blank" 
+                   class="bg-white p-6 rounded-lg shadow-md card-hover transition-all duration-300 border border-gray-200">
+                    <h3 class="font-semibold text-gray-900 mb-2">SaaS Boilerplate</h3>
+                    <p class="text-gray-600 text-sm">SaaS应用模板</p>
+                </a>
+                <a href="https://github.com/ixartz/Next-JS-Landing-Page-Starter-Template" target="_blank" 
+                   class="bg-white p-6 rounded-lg shadow-md card-hover transition-all duration-300 border border-gray-200">
+                    <h3 class="font-semibold text-gray-900 mb-2">Landing Page Template</h3>
+                    <p class="text-gray-600 text-sm">Next.js落地页模板</p>
+                </a>
+                <a href="https://github.com/ixartz/Astro-boilerplate" target="_blank" 
+                   class="bg-white p-6 rounded-lg shadow-md card-hover transition-all duration-300 border border-gray-200">
+                    <h3 class="font-semibold text-gray-900 mb-2">Astro Boilerplate</h3>
+                    <p class="text-gray-600 text-sm">Astro博客和作品集模板</p>
+                </a>
+                <a href="https://github.com/weijunext/landing-page-boilerplate" target="_blank" 
+                   class="bg-white p-6 rounded-lg shadow-md card-hover transition-all duration-300 border border-gray-200">
+                    <h3 class="font-semibold text-gray-900 mb-2">Landing Page Boilerplate</h3>
+                    <p class="text-gray-600 text-sm">多功能落地页模板</p>
+                </a>
+                <a href="https://github.com/ai-aigc-studio/Viggle-AI-WebUI" target="_blank" 
+                   class="bg-white p-6 rounded-lg shadow-md card-hover transition-all duration-300 border border-gray-200">
+                    <h3 class="font-semibold text-gray-900 mb-2">Viggle AI WebUI</h3>
+                    <p class="text-gray-600 text-sm">开源AI客户端</p>
+                </a>
+                <a href="https://github.com/weijunext/new-blog" target="_blank" 
+                   class="bg-white p-6 rounded-lg shadow-md card-hover transition-all duration-300 border border-gray-200">
+                    <h3 class="font-semibold text-gray-900 mb-2">周刊博客</h3>
+                    <p class="text-gray-600 text-sm">新博客模板</p>
+                </a>
+                <a href="https://github.com/weijunext/gapis.money" target="_blank" 
+                   class="bg-white p-6 rounded-lg shadow-md card-hover transition-all duration-300 border border-gray-200">
+                    <h3 class="font-semibold text-gray-900 mb-2">GAPIS Money</h3>
+                    <p class="text-gray-600 text-sm">博客模板</p>
+                </a>
+                <a href="https://github.com/daimajia/huntscreens" target="_blank" 
+                   class="bg-white p-6 rounded-lg shadow-md card-hover transition-all duration-300 border border-gray-200">
+                    <h3 class="font-semibold text-gray-900 mb-2">HuntScreens</h3>
+                    <p class="text-gray-600 text-sm">产品截图工具</p>
+                </a>
+                <a href="https://github.com/weijunext/smart-excel-ai" target="_blank" 
+                   class="bg-white p-6 rounded-lg shadow-md card-hover transition-all duration-300 border border-gray-200">
+                    <h3 class="font-semibold text-gray-900 mb-2">Smart Excel AI</h3>
+                    <p class="text-gray-600 text-sm">Excel公式生成器</p>
+                </a>
+                <a href="https://github.com/ashleyrudland/nextjs_vps" target="_blank" 
+                   class="bg-white p-6 rounded-lg shadow-md card-hover transition-all duration-300 border border-gray-200">
+                    <h3 class="font-semibold text-gray-900 mb-2">NextJS VPS</h3>
+                    <p class="text-gray-600 text-sm">VPS部署示例</p>
+                </a>
+                <a href="https://github.com/Pwntus/change-hairstyle-ai" target="_blank" 
+                   class="bg-white p-6 rounded-lg shadow-md card-hover transition-all duration-300 border border-gray-200">
+                    <h3 class="font-semibold text-gray-900 mb-2">Change Hairstyle AI</h3>
+                    <p class="text-gray-600 text-sm">AI换发型工具</p>
+                </a>
+                <a href="https://github.com/replicate/green-screen-creator" target="_blank" 
+                   class="bg-white p-6 rounded-lg shadow-md card-hover transition-all duration-300 border border-gray-200">
+                    <h3 class="font-semibold text-gray-900 mb-2">Green Screen Creator</h3>
+                    <p class="text-gray-600 text-sm">视频绿幕工具</p>
+                </a>
+                <a href="https://github.com/wasp-lang/open-saas/" target="_blank" 
+                   class="bg-white p-6 rounded-lg shadow-md card-hover transition-all duration-300 border border-gray-200">
+                    <h3 class="font-semibold text-gray-900 mb-2">Open SaaS</h3>
+                    <p class="text-gray-600 text-sm">开源SaaS启动器</p>
+                </a>
+                <a href="https://github.com/ocluf/justship" target="_blank" 
+                   class="bg-white p-6 rounded-lg shadow-md card-hover transition-all duration-300 border border-gray-200">
+                    <h3 class="font-semibold text-gray-900 mb-2">JustShip</h3>
+                    <p class="text-gray-600 text-sm">Svelte 5 SaaS模板</p>
+                </a>
+                <a href="https://github.com/JavascriptMick/supanuxt-saas" target="_blank" 
+                   class="bg-white p-6 rounded-lg shadow-md card-hover transition-all duration-300 border border-gray-200">
+                    <h3 class="font-semibold text-gray-900 mb-2">SupaNuxt SaaS</h3>
+                    <p class="text-gray-600 text-sm">Nuxt3 SaaS模板</p>
+                </a>
+                <a href="https://github.com/saasfly/saasfly" target="_blank" 
+                   class="bg-white p-6 rounded-lg shadow-md card-hover transition-all duration-300 border border-gray-200">
+                    <h3 class="font-semibold text-gray-900 mb-2">SaaSFly</h3>
+                    <p class="text-gray-600 text-sm">Next.js SaaS模板</p>
+                </a>
+                <a href="https://github.com/mundane799699/xlike-web" target="_blank" 
+                   class="bg-white p-6 rounded-lg shadow-md card-hover transition-all duration-300 border border-gray-200">
+                    <h3 class="font-semibold text-gray-900 mb-2">ShipFast Typescript</h3>
+                    <p class="text-gray-600 text-sm">TypeScript快速启动</p>
+                </a>
+            </div>
+        </section>
+
+        <!-- 导航站模板 -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                <i class="fas fa-sitemap text-indigo-600 mr-3"></i>
+                导航站模板
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <a href="https://github.com/fre123-com/fre123-nav/" target="_blank" 
+                   class="bg-white p-6 rounded-lg shadow-md card-hover transition-all duration-300 border border-gray-200">
+                    <h3 class="font-semibold text-gray-900 mb-2">FRE123 导航</h3>
+                    <p class="text-gray-600 text-sm">免费资源共享平台导航</p>
+                </a>
+                <a href="https://github.com/dubinc/oss-gallery" target="_blank" 
+                   class="bg-white p-6 rounded-lg shadow-md card-hover transition-all duration-300 border border-gray-200">
+                    <h3 class="font-semibold text-gray-900 mb-2">OSS Gallery</h3>
+                    <p class="text-gray-600 text-sm">开源项目展示平台</p>
+                </a>
+                <a href="https://github.com/WebStackPage/WebStackPage.github.io" target="_blank" 
+                   class="bg-white p-6 rounded-lg shadow-md card-hover transition-all duration-300 border border-gray-200">
+                    <h3 class="font-semibold text-gray-900 mb-2">WebStack</h3>
+                    <p class="text-gray-600 text-sm">静态响应式网址导航</p>
+                </a>
+                <a href="https://github.com/6677-ai/tap4-ai-webui" target="_blank" 
+                   class="bg-white p-6 rounded-lg shadow-md card-hover transition-all duration-300 border border-gray-200">
+                    <h3 class="font-semibold text-gray-900 mb-2">Tap4 AI WebUI</h3>
+                    <p class="text-gray-600 text-sm">AI工具目录开源UI</p>
+                </a>
+                <a href="https://github.com/all-in-aigc/gpts-works" target="_blank" 
+                   class="bg-white p-6 rounded-lg shadow-md card-hover transition-all duration-300 border border-gray-200">
+                    <h3 class="font-semibold text-gray-900 mb-2">GPTs Works</h3>
+                    <p class="text-gray-600 text-sm">第三方GPTs商店</p>
+                </a>
+                <a href="https://github.com/ddahan/ui-libs" target="_blank" 
+                   class="bg-white p-6 rounded-lg shadow-md card-hover transition-all duration-300 border border-gray-200">
+                    <h3 class="font-semibold text-gray-900 mb-2">UI Libs</h3>
+                    <p class="text-gray-600 text-sm">Vue 3 / Nuxt 3 UI库选择器</p>
+                </a>
+                <a href="https://github.com/DokeyAI/dokeyai-data" target="_blank" 
+                   class="bg-white p-6 rounded-lg shadow-md card-hover transition-all duration-300 border border-gray-200">
+                    <h3 class="font-semibold text-gray-900 mb-2">DokeyAI Data</h3>
+                    <p class="text-gray-600 text-sm">AI工具公开数据</p>
+                </a>
+                <a href="https://vercel.com/templates" target="_blank" 
+                   class="bg-white p-6 rounded-lg shadow-md card-hover transition-all duration-300 border border-gray-200">
+                    <h3 class="font-semibold text-gray-900 mb-2">Vercel 模板中心</h3>
+                    <p class="text-gray-600 text-sm">Vercel官方模板集合</p>
+                </a>
+            </div>
+        </section>
+
+        <!-- 资讯部分 -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                <i class="fas fa-newspaper text-red-600 mr-3"></i>
+                资讯部分
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <a href="https://liberating-doll-b8a.notion.site/Reddit-1a8e8aed91b18021839ecba8b74e530b" target="_blank" 
+                   class="bg-white p-6 rounded-lg shadow-md card-hover transition-all duration-300 border border-gray-200">
+                    <h3 class="font-semibold text-gray-900 mb-2">Reddit 子社区</h3>
+                    <p class="text-gray-600 text-sm">优质Reddit社区推荐</p>
+                </a>
+                <a href="https://developers.google.com/search/docs/fundamentals/creating-helpful-content?hl=zh-cn" target="_blank" 
+                   class="bg-white p-6 rounded-lg shadow-md card-hover transition-all duration-300 border border-gray-200">
+                    <h3 class="font-semibold text-gray-900 mb-2">Google SEO 基础知识</h3>
+                    <p class="text-gray-600 text-sm">谷歌搜索中心官方指南</p>
+                </a>
+                <a href="https://ahrefs.com/websites#trending" target="_blank" 
+                   class="bg-white p-6 rounded-lg shadow-md card-hover transition-all duration-300 border border-gray-200">
+                    <h3 class="font-semibold text-gray-900 mb-2">Ahrefs 热门网站</h3>
+                    <p class="text-gray-600 text-sm">趋势网站分析</p>
+                </a>
+                <a href="https://docs.google.com/spreadsheets/d/1QOdqq9KbjQj1JZO43vc1pir2rnEEsMUXzTDATrOCn2k/edit?gid=0#gid=0" target="_blank" 
+                   class="bg-white p-6 rounded-lg shadow-md card-hover transition-all duration-300 border border-gray-200">
+                    <h3 class="font-semibold text-gray-900 mb-2">AI VIDEO SAAS TOOL</h3>
+                    <p class="text-gray-600 text-sm">AI视频SaaS工具列表</p>
+                </a>
+                <a href="https://docs.google.com/spreadsheets/d/1eUni44pIURML2VWFFXKzNmm-WKuuam9_ynr5Fo_Q74M/edit?gid=83151001#gid=83151001" target="_blank" 
+                   class="bg-white p-6 rounded-lg shadow-md card-hover transition-all duration-300 border border-gray-200">
+                    <h3 class="font-semibold text-gray-900 mb-2">Starter Story 报告</h3>
+                    <p class="text-gray-600 text-sm">独立创业者报告2.0</p>
+                </a>
+                <a href="https://www.500mrr.com/" target="_blank" 
+                   class="bg-white p-6 rounded-lg shadow-md card-hover transition-all duration-300 border border-gray-200">
+                    <h3 class="font-semibold text-gray-900 mb-2">500 MRR</h3>
+                    <p class="text-gray-600 text-sm">月收入500美元项目展示</p>
+                </a>
+                <a href="https://news.ycombinator.com/item?id=42373343" target="_blank" 
+                   class="bg-white p-6 rounded-lg shadow-md card-hover transition-all duration-300 border border-gray-200">
+                    <h3 class="font-semibold text-gray-900 mb-2">HN: 500/month 项目</h3>
+                    <p class="text-gray-600 text-sm">Hacker News讨论帖</p>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="bg-white border-t mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <div class="text-center text-gray-600">
+                <p>&copy; 2024 开发者导航站. 收集整理开发者常用工具和资源.</p>
+                <p class="mt-2 text-sm">多上站，多实践，世界给你的反馈远大于站在岸上看别人实践游泳。</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 搜索功能
+        const searchInput = document.getElementById('searchInput');
+        const cards = document.querySelectorAll('a[target="_blank"]');
+
+        searchInput.addEventListener('input', function() {
+            const searchTerm = this.value.toLowerCase();
+            
+            cards.forEach(card => {
+                const title = card.querySelector('h3, h4').textContent.toLowerCase();
+                const description = card.querySelector('p').textContent.toLowerCase();
+                const content = title + ' ' + description;
+                
+                if (content.includes(searchTerm)) {
+                    card.style.display = 'block';
+                    // 高亮搜索词
+                    if (searchTerm) {
+                        highlightText(card, searchTerm);
+                    } else {
+                        removeHighlight(card);
+                    }
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+
+        function highlightText(element, searchTerm) {
+            const title = element.querySelector('h3, h4');
+            const description = element.querySelector('p');
+            
+            title.innerHTML = title.textContent.replace(
+                new RegExp(searchTerm, 'gi'),
+                match => `<span class="search-highlight">${match}</span>`
+            );
+            
+            description.innerHTML = description.textContent.replace(
+                new RegExp(searchTerm, 'gi'),
+                match => `<span class="search-highlight">${match}</span>`
+            );
+        }
+
+        function removeHighlight(element) {
+            const title = element.querySelector('h3, h4');
+            const description = element.querySelector('p');
+            
+            title.innerHTML = title.textContent;
+            description.innerHTML = description.textContent;
+        }
+
+        // 主题切换
+        function toggleTheme() {
+            document.body.classList.toggle('dark');
+            const icon = document.querySelector('.fa-moon');
+            if (document.body.classList.contains('dark')) {
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+            } else {
+                icon.classList.remove('fa-sun');
+                icon.classList.add('fa-moon');
+            }
+        }
+
+        // 添加键盘快捷键
+        document.addEventListener('keydown', function(e) {
+            if (e.ctrlKey && e.key === 'k') {
+                e.preventDefault();
+                searchInput.focus();
+            }
+        });
+    </script>
+</body>
+</html> 
