@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>书签导航 - 海外网站导航</title>
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-88G6VFT7P8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-88G6VFT7P8');
+    </script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            color: white;
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        .search-box {
+            background: white;
+            border-radius: 50px;
+            padding: 15px 25px;
+            margin: 20px auto;
+            max-width: 500px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            display: flex;
+            align-items: center;
+        }
+        
+        .search-box input {
+            flex: 1;
+            border: none;
+            outline: none;
+            font-size: 16px;
+            padding: 10px;
+        }
+        
+        .search-box button {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background 0.3s;
+        }
+        
+        .search-box button:hover {
+            background: #5a6fd8;
+        }
+        
+        .categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+        
+        .category {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .category:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+        }
+        
+        .category h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 10px;
+        }
+        
+        .links {
+            display: grid;
+            gap: 10px;
+        }
+        
+        .link {
+            display: flex;
+            align-items: center;
+            padding: 12px 15px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            text-decoration: none;
+            color: #333;
+            transition: all 0.3s;
+            border-left: 4px solid transparent;
+        }
+        
+        .link:hover {
+            background: #667eea;
+            color: white;
+            border-left-color: #5a6fd8;
+            transform: translateX(5px);
+        }
+        
+        .link-icon {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+            background: #667eea;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 12px;
+            font-weight: bold;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            color: white;
+            opacity: 0.8;
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .categories {
+                grid-template-columns: 1fr;
+            }
+            
+            .search-box {
+                margin: 20px 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🌐 海外网站导航</h1>
+            <p>精选优质海外网站，让您轻松访问全球资源</p>
+            
+            <div class="search-box">
+                <input type="text" placeholder="搜索网站..." id="searchInput">
+                <button onclick="searchSites()">搜索</button>
+            </div>
+        </div>
+        
+        <div class="categories">
+            <div class="category">
+                <h3>🔍 搜索引擎</h3>
+                <div class="links">
+                    <a href="https://www.google.com" class="link" target="_blank">
+                        <span class="link-icon">G</span>
+                        Google
+                    </a>
+                    <a href="https://www.bing.com" class="link" target="_blank">
+                        <span class="link-icon">B</span>
+                        Bing
+                    </a>
+                    <a href="https://duckduckgo.com" class="link" target="_blank">
+                        <span class="link-icon">D</span>
+                        DuckDuckGo
+                    </a>
+                    <a href="https://www.baidu.com" class="link" target="_blank">
+                        <span class="link-icon">百</span>
+                        百度
+                    </a>
+                </div>
+            </div>
+            
+            <div class="category">
+                <h3>📚 学习资源</h3>
+                <div class="links">
+                    <a href="https://www.coursera.org" class="link" target="_blank">
+                        <span class="link-icon">C</span>
+                        Coursera
+                    </a>
+                    <a href="https://www.edx.org" class="link" target="_blank">
+                        <span class="link-icon">E</span>
+                        edX
+                    </a>
+                    <a href="https://www.khanacademy.org" class="link" target="_blank">
+                        <span class="link-icon">K</span>
+                        Khan Academy
+                    </a>
+                    <a href="https://www.udemy.com" class="link" target="_blank">
+                        <span class="link-icon">U</span>
+                        Udemy
+                    </a>
+                </div>
+            </div>
+            
+            <div class="category">
+                <h3>💼 工作工具</h3>
+                <div class="links">
+                    <a href="https://www.linkedin.com" class="link" target="_blank">
+                        <span class="link-icon">L</span>
+                        LinkedIn
+                    </a>
+                    <a href="https://github.com" class="link" target="_blank">
+                        <span class="link-icon">G</span>
+                        GitHub
+                    </a>
+                    <a href="https://stackoverflow.com" class="link" target="_blank">
+                        <span class="link-icon">S</span>
+                        Stack Overflow
+                    </a>
+                    <a href="https://www.notion.so" class="link" target="_blank">
+                        <span class="link-icon">N</span>
+                        Notion
+                    </a>
+                </div>
+            </div>
+            
+            <div class="category">
+                <h3>🎵 娱乐媒体</h3>
+                <div class="links">
+                    <a href="https://www.youtube.com" class="link" target="_blank">
+                        <span class="link-icon">Y</span>
+                        YouTube
+                    </a>
+                    <a href="https://www.netflix.com" class="link" target="_blank">
+                        <span class="link-icon">N</span>
+                        Netflix
+                    </a>
+                    <a href="https://open.spotify.com" class="link" target="_blank">
+                        <span class="link-icon">S</span>
+                        Spotify
+                    </a>
+                    <a href="https://www.reddit.com" class="link" target="_blank">
+                        <span class="link-icon">R</span>
+                        Reddit
+                    </a>
+                </div>
+            </div>
+            
+            <div class="category">
+                <h3>🛒 购物平台</h3>
+                <div class="links">
+                    <a href="https://www.amazon.com" class="link" target="_blank">
+                        <span class="link-icon">A</span>
+                        Amazon
+                    </a>
+                    <a href="https://www.ebay.com" class="link" target="_blank">
+                        <span class="link-icon">E</span>
+                        eBay
+                    </a>
+                    <a href="https://www.aliexpress.com" class="link" target="_blank">
+                        <span class="link-icon">A</span>
+                        AliExpress
+                    </a>
+                    <a href="https://www.etsy.com" class="link" target="_blank">
+                        <span class="link-icon">E</span>
+                        Etsy
+                    </a>
+                </div>
+            </div>
+            
+            <div class="category">
+                <h3>📰 新闻资讯</h3>
+                <div class="links">
+                    <a href="https://www.bbc.com" class="link" target="_blank">
+                        <span class="link-icon">B</span>
+                        BBC News
+                    </a>
+                    <a href="https://www.cnn.com" class="link" target="_blank">
+                        <span class="link-icon">C</span>
+                        CNN
+                    </a>
+                    <a href="https://www.reuters.com" class="link" target="_blank">
+                        <span class="link-icon">R</span>
+                        Reuters
+                    </a>
+                    <a href="https://www.theguardian.com" class="link" target="_blank">
+                        <span class="link-icon">G</span>
+                        The Guardian
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>&copy; 2024 海外网站导航. 让世界触手可及</p>
+        </div>
+    </div>
+    
+    <script>
+        function searchSites() {
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+            const links = document.querySelectorAll('.link');
+            
+            links.forEach(link => {
+                const text = link.textContent.toLowerCase();
+                if (text.includes(searchTerm)) {
+                    link.style.display = 'flex';
+                } else {
+                    link.style.display = 'none';
+                }
+            });
+        }
+        
+        // 回车键搜索
+        document.getElementById('searchInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                searchSites();
+            }
+        });
+        
+        // 页面加载完成后的Google Analytics事件
+        document.addEventListener('DOMContentLoaded', function() {
+            // 记录页面浏览
+            gtag('event', 'page_view', {
+                page_title: '海外网站导航',
+                page_location: window.location.href
+            });
+        });
+        
+        // 记录链接点击事件
+        document.querySelectorAll('.link').forEach(link => {
+            link.addEventListener('click', function() {
+                gtag('event', 'click', {
+                    event_category: 'navigation',
+                    event_label: this.textContent.trim(),
+                    value: 1
+                });
+            });
+        });
+    </script>
+</body>
+</html> 
